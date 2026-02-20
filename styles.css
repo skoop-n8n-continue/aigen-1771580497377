@@ -26,17 +26,24 @@ body {
     max-width: 800px;
     aspect-ratio: 2 / 1;
     display: flex;
-    padding: 3rem;
+    flex-direction: column;
+    padding: 2.5rem 3rem;
     color: var(--text-color);
     position: relative;
-    border-radius: 4px; /* Slight roundness for cleaner flat look */
+    border-radius: 4px;
+}
+
+.main-weather {
+    flex: 2;
+    display: flex;
+    width: 100%;
 }
 
 .content-left {
     flex: 1.5;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .content-right {
@@ -47,69 +54,130 @@ body {
 }
 
 .condition {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
 }
 
 .temperature {
-    font-size: 9rem;
+    font-size: 7.5rem;
     font-weight: 700;
-    line-height: 0.85;
+    line-height: 0.8;
+    margin: 0.2rem 0;
+}
+
+.date-location {
     margin: 0.5rem 0;
 }
 
 .date {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 400;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.1rem;
 }
 
 .location {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 400;
     opacity: 0.9;
 }
 
 .range {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    margin-top: auto;
+    margin-top: 0.5rem;
 }
 
 .sun-icon {
-    width: 80%;
-    max-width: 250px;
+    width: 85%;
+    max-width: 220px;
 }
 
 .sun-icon svg {
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 0 transparent); /* Ensuring flat look */
+    filter: drop-shadow(0 0 0 transparent);
+}
+
+/* Forecast Styles */
+.forecast {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1.5rem;
+}
+
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.day {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.forecast-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.forecast-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.forecast-temp {
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
 /* Responsive adjustments */
-@media (max-height: 500px) {
+@media (max-height: 600px) {
     .weather-card {
-        padding: 1.5rem;
+        padding: 1.5rem 2rem;
     }
     .temperature {
         font-size: 5rem;
+    }
+    .forecast {
+        margin-top: 1rem;
+        padding-top: 1rem;
     }
 }
 
 @media (max-width: 600px) {
     .weather-card {
         aspect-ratio: auto;
-        flex-direction: column;
         height: auto;
         padding: 2rem;
     }
+    .main-weather {
+        flex-direction: column;
+    }
     .content-right {
-        margin-top: 2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
     }
     .sun-icon {
-        width: 150px;
+        width: 120px;
+    }
+    .forecast {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .forecast-item {
+        flex: 1 1 40%;
     }
 }
