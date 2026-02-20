@@ -1,7 +1,7 @@
 :root {
-    --bg-color: #ffed4a; /* Vibrant sunny yellow */
+    --bg-color: #ff6d00; /* Vibrant orange */
     --text-color: #212121; /* Dark high-contrast text */
-    --sun-color: #e65100; /* Deep orange-gold sun */
+    --sun-color: #ffeb3b; /* Bright yellow sun */
 }
 
 * {
@@ -12,7 +12,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #fff59d; /* Light yellow outer */ /* Dark red outer bg for "on a red background" look */
+    background-color: #ffe0b2; /* Light peach/orange outer */
     height: 100vh;
     display: flex;
     justify-content: center;
