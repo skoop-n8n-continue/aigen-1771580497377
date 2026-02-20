@@ -1,0 +1,115 @@
+:root {
+    --bg-color: #00b7af;
+    --text-color: #ffffff;
+    --sun-color: #FFD700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #10181f; /* Dark outer bg for digital signage context */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.weather-card {
+    background-color: var(--bg-color);
+    width: 90vw;
+    max-width: 800px;
+    aspect-ratio: 2 / 1;
+    display: flex;
+    padding: 3rem;
+    color: var(--text-color);
+    position: relative;
+    border-radius: 4px; /* Slight roundness for cleaner flat look */
+}
+
+.content-left {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.condition {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.temperature {
+    font-size: 9rem;
+    font-weight: 700;
+    line-height: 0.85;
+    margin: 0.5rem 0;
+}
+
+.date {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+}
+
+.location {
+    font-size: 1.25rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.range {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: auto;
+}
+
+.sun-icon {
+    width: 80%;
+    max-width: 250px;
+}
+
+.sun-icon svg {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 0 transparent); /* Ensuring flat look */
+}
+
+/* Responsive adjustments */
+@media (max-height: 500px) {
+    .weather-card {
+        padding: 1.5rem;
+    }
+    .temperature {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .weather-card {
+        aspect-ratio: auto;
+        flex-direction: column;
+        height: auto;
+        padding: 2rem;
+    }
+    .content-right {
+        margin-top: 2rem;
+    }
+    .sun-icon {
+        width: 150px;
+    }
+}
