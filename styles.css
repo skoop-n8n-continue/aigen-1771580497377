@@ -1,7 +1,7 @@
 :root {
-    --bg-color: #ff6d00; /* Vibrant orange */
-    --text-color: #212121; /* Dark high-contrast text */
-    --sun-color: #ffeb3b; /* Bright yellow sun */
+    --bg-color: #e63946; /* Vibrant red */
+    --text-color: #ffffff; /* White high-contrast text */
+    --sun-color: #FFD700; /* Gold sun */
 }
 
 * {
@@ -12,7 +12,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #ffe0b2; /* Light peach/orange outer */
+    background-color: #2b0d0d; /* Deep dark red outer */
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -110,7 +110,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
-    border-top: 2px solid rgba(33, 33, 33, 0.3);
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
     padding-top: 1.5rem;
 }
 
@@ -150,7 +150,7 @@ body {
     fill: var(--sun-color) !important;
 }
 .forecast-icon svg path {
-    fill: var(--text-color) !important;
+    fill: rgba(255, 255, 255, 0.85) !important;
 }
 .sun-icon svg circle {
     fill: var(--sun-color) !important;
