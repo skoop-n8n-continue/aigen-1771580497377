@@ -1,7 +1,7 @@
 :root {
-    --bg-color: #e63946;
-    --text-color: #ffffff;
-    --sun-color: #FFD700;
+    --bg-color: #ffed4a; /* Vibrant sunny yellow */
+    --text-color: #212121; /* Dark high-contrast text */
+    --sun-color: #e65100; /* Deep orange-gold sun */
 }
 
 * {
@@ -12,7 +12,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #2b0d0d; /* Dark red outer bg for "on a red background" look */
+    background-color: #fff59d; /* Light yellow outer */ /* Dark red outer bg for "on a red background" look */
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -98,6 +98,8 @@ body {
 .sun-icon svg {
     width: 100%;
     height: auto;
+    fill: var(--sun-color);
+    stroke: var(--sun-color);
     filter: drop-shadow(0 0 0 transparent);
 }
 
@@ -108,7 +110,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
-    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    border-top: 2px solid rgba(33, 33, 33, 0.3);
     padding-top: 1.5rem;
 }
 
@@ -143,6 +145,19 @@ body {
     font-weight: 600;
 }
 
+/* Icon overrides for yellow theme */
+.forecast-icon svg circle {
+    fill: var(--sun-color) !important;
+}
+.forecast-icon svg path {
+    fill: var(--text-color) !important;
+}
+.sun-icon svg circle {
+    fill: var(--sun-color) !important;
+}
+.sun-icon svg g {
+    stroke: var(--sun-color) !important;
+}
 /* Responsive adjustments */
 @media (max-height: 600px) {
     .weather-card {
